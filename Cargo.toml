@@ -1,0 +1,8 @@
+[package]
+name = "screen-emulator"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+grid = "0.5"
+iced = "0.3"
