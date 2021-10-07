@@ -1,9 +1,7 @@
-#![feature(generic_associated_types)]
-
 mod pixel;
 mod screen;
 
-use iced::{window, Application, Settings};
+use iced::{Application, Settings};
 use screen::{Screen, ScreenOptions};
 
 // fn main() {
@@ -20,13 +18,13 @@ use screen::{Screen, ScreenOptions};
 //     pixels.into_iter().for_each(|pixel| println!("{}", pixel));
 // }
 
-fn main() {
-    // let screen = Screen::new(options);
+fn main() -> iced::Result {
+    let flags = ScreenOptions::new(Some("test"), Some((32, 24)), None);
     let settings = Settings {
         antialiasing: true,
-        flags: ScreenOptions::new(Some("test"), Some((32, 24)), None),
+        flags,
         ..Settings::default()
     };
 
-    Screen::run(settings);
+    Screen::run(settings)
 }

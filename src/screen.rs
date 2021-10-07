@@ -1,7 +1,7 @@
 use crate::pixel::Pixel;
 
 use grid::{self, Grid};
-use iced::{executor, Application, Column, Command, Container, Text};
+use iced::{executor, Application, Command, Text};
 
 pub struct ScreenOptions {
     title: String,
